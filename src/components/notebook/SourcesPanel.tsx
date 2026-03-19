@@ -76,23 +76,25 @@ export function SourcesPanel({ notebook, onAddSource }: SourcesPanelProps) {
         </Button>
 
         {/* Search */}
-        <div className="mt-3 relative">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
-          <Input
-            placeholder="Search the web for new sources"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="pl-9 pr-20 py-2 text-sm border-gray-200 focus:border-gray-400"
-          />
-          <div className="absolute right-2 top-1/2 -translate-y-1/2 flex items-center gap-1">
-            <button className="flex items-center gap-1 px-2 py-1 text-xs text-gray-500 hover:bg-gray-100 rounded">
-              <Globe className="w-3 h-3" />
-              Web
+        <div className="mt-3 space-y-2">
+          <div className="relative">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+            <Input
+              placeholder="Search the web for new sources"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="pl-9 py-2 text-sm border-gray-200 focus:border-gray-400 w-full"
+            />
+          </div>
+          <div className="flex items-center gap-2">
+            <button className="flex items-center gap-1 px-3 py-1.5 text-xs text-gray-600 hover:bg-gray-100 rounded-lg border border-gray-200 bg-white">
+              <Globe className="w-3.5 h-3.5" />
+              <span>Web</span>
               <ChevronDown className="w-3 h-3" />
             </button>
-            <button className="flex items-center gap-1 px-2 py-1 text-xs text-gray-500 hover:bg-gray-100 rounded">
-              <Zap className="w-3 h-3" />
-              Fast Research
+            <button className="flex items-center gap-1 px-3 py-1.5 text-xs text-gray-600 hover:bg-gray-100 rounded-lg border border-gray-200 bg-white">
+              <Zap className="w-3.5 h-3.5" />
+              <span>Fast Research</span>
               <ChevronDown className="w-3 h-3" />
             </button>
           </div>
